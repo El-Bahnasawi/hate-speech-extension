@@ -56,6 +56,8 @@ export async function processText(elements) {
 
             const { results = [], db_logged } = await res.json();
             log(`📡 API response (${batch.length}) ${Date.now() - startMs} ms`);
+            log("🧾 Results:", results);
+            
             db_logged !== undefined && log("📄 DB logging status:", db_logged);
 
             /* 3️⃣  Apply decisions */
